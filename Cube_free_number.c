@@ -3,7 +3,7 @@ int main()
 {
     int N, i = 2, ch = 0, j = 1, k;
     scanf("%d", &N);
-    int lo = 0;
+    int lo = N;
     while (i <= 100)
     {
         if (N % (i * i * i) == 0)
@@ -20,17 +20,12 @@ int main()
         {
             for (k = 2; k <= 100; k++)
             {
-                if (j % (k * k * k) != 0)
+                if (j % (k * k * k) == 0)
                 {
-                    lo += 1;
-                    break;
-                }
-                else
-                {
-                    lo -= 1;
+                    lo -= 1;                
                 }
             }
         }
-        printf("%d", lo + 1);
+        printf("%d",lo);
     }
 }
