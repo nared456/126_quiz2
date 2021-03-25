@@ -3,7 +3,7 @@ int main()
 {
     int N, i, k, m;
     int Palindrome = 0;
-    scanf("%d", &N);
+    scanf("%d", &N);/*
     for (i = 1; i <= N; i++)
     {
         if (i >= 11)
@@ -29,7 +29,19 @@ int main()
                 Palindrome++;
             }
         }
+    }*/
+    if (N > 100)
+    {
+        i=100;
+        for (i+1; i<=1000; i++)
+        {
+            k = i%100;
+            m = i-100;
+            if (k == m)
+            {
+                Palindrome++;
+            }
+        }
     }
-
     printf("%d", Palindrome);
 }
