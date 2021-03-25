@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int N, i = 2, ch = 0, j = 1;
+    int N, i = 2, ch = 0, j = 1, k;
     scanf("%d", &N);
     int lo = 0;
     while (i <= 100)
@@ -16,18 +16,21 @@ int main()
     }
     if (ch < 1)
     {
-        int k = 2;
-        for (j = 1; j <= N; j++, k++)
+        for (j = 1; j < N; j++)
         {
-            if (j % (k * k * k) != 0)
+            for (k = 2; k <= 100; k++)
             {
-                lo += 1;
-            }
-            else
-            {
-                lo -= 1;
+                if (j % (k * k * k) != 0)
+                {
+                    lo += 1;
+                    break;
+                }
+                else
+                {
+                    lo -= 1;
+                }
             }
         }
-        printf("%d", lo);
+        printf("%d", lo + 1);
     }
 }
