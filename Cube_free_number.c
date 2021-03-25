@@ -9,17 +9,17 @@ int main()
     {
         if (N % (i * i * i) == 0)
         {
-            printf("Not Cube Free");
             ch++;
+            printf("Not Cube Free");
             break;
         }
         i++;
     }
     if (ch < 1)
     {
-        for (k = 2; k <= 100; k++)
+        for (j = 1; j < N; j++)
         {
-            for (j = 1; j <= N; j++)
+            for (k = 2; k<=100; k++)
             {
                 if (j % (k * k * k) == 0)
                 {
