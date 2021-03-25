@@ -19,7 +19,7 @@ int main()
         int k = 2;
         while (j <= N)
         {
-            if (j % (k * k * k))
+            if (j % (k * k * k) == 0)
             {
                 lo -= 1;
             }
